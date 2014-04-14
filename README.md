@@ -1,5 +1,5 @@
-Projekt na zaliczenie Technologi Seci Web
-====
+Projekt na zaliczenie Technologi Sieci Web
+==
 
 Nazwa: Parafia
 ===
