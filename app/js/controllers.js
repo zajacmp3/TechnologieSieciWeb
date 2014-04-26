@@ -2,9 +2,10 @@
 
 /* Controllers */
 
-var homeControllers = angular.module('homeControllers', []);
+angular.module('myApp.controllers', [])
+    .controller('MyCtrl', [function() {
 
-homeControllers.controller('homeCtrl', ['$scope', '$http',
-    function($scope, $http) {
-        $scope.test = 'This is a test';
-}]);
+    }])
+    .controller('MyCtrl', [function() {
+
+    }]);
