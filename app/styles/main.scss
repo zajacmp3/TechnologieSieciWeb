@@ -6,6 +6,9 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
+//static elements css'es
+@import "./menu-bar.scss";
+
 /* app css stylesheet */
 
 body {

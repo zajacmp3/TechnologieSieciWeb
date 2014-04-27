@@ -27,23 +27,14 @@
 	<!-- Add your site or application content here -->
 	<div class="container">
 		<div class="header">
-			<a href=""><img src="" class="logo" /></a>
-			<div class="menu">
-				<span class="item">Home</span> <span class="item">News</span> <span
-					class="item">Services</span> <span class="item">About us</span> <span
-					class="item">Contact</span>
-			</div>
+			<ng-include src="'/views/elements/layout/menu-bar.html'"></ng-include>
 		</div>
 		<div class="content">
 
 			<div ng-view></div>
 
 		</div>
-		<div class="footer">
-			<div class="site-description">
-				<span class="copyright">Copyright Mateusz Zając @ 2014</span>
-			</div>
-		</div>
+		<ng-include src="'/views/elements/layout/footer.html'"></ng-include>
 	</div>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

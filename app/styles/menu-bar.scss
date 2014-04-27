@@ -1,0 +1,22 @@
+//Overriding
+.navbar-default {
+	background-color: #68B7DE;
+	& .navbar-nav {
+		> .active, .open {
+			> a {
+				background-color: #93CFED;
+			}
+			> a:hover {
+				background-color: #93CFED;
+			}
+			> a:focus {
+				background-color: #93CFED;
+			}
+		}
+	}
+}
+//End Overriding
+
+.logo {
+	width: 10%;
+}

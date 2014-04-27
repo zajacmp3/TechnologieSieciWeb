@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="508.44144"
+   height="647.6958"
+   id="svg38137"
+   version="1.1"
+   inkscape:version="0.47pre4 "
+   sodipodi:docname="church.svg">
+  <defs
+     id="defs38139">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective38145" />
+    <inkscape:perspective
+       id="perspective37968"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11852"
+       id="radialGradient11994"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1.7957548,9.1069356e-6,-4.1132141e-6,-1.0098352,-46974.663,298.38911)"
+       cx="-16799.619"
+       cy="148.4975"
+       fx="-16799.619"
+       fy="148.4975"
+       r="11.063739" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11852">
+      <stop
+         style="stop-color:#b3b3b3;stop-opacity:1;"
+         offset="0"
+         id="stop11854" />
+      <stop
+         style="stop-color:#b3b3b3;stop-opacity:0;"
+         offset="1"
+         id="stop11856" />
+    </linearGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter11836">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.11024274"
+         id="feGaussianBlur11838" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11842"
+       id="linearGradient11992"
+       gradientUnits="userSpaceOnUse"
+       x1="-16604.953"
+       y1="151.68492"
+       x2="-16599.75"
+       y2="149.82877"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,81812.121,-114.71393)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11842">
+      <stop
+         style="stop-color:#c1c1c1;stop-opacity:1;"
+         offset="0"
+         id="stop11844" />
+      <stop
+         style="stop-color:#c1c1c1;stop-opacity:0;"
+         offset="1"
+         id="stop11846" />
+    </linearGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter11558">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.1492175"
+         id="feGaussianBlur11560" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11582"
+       id="linearGradient11990"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,81979.512,-114.71393)"
+       x1="-16582"
+       y1="162.77766"
+       x2="-16660.75"
+       y2="162.77766" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11582">
+      <stop
+         style="stop-color:#999999;stop-opacity:1;"
+         offset="0"
+         id="stop11584" />
+      <stop
+         style="stop-color:#999999;stop-opacity:0;"
+         offset="1"
+         id="stop11586" />
+    </linearGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter11574">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.30125"
+         id="feGaussianBlur11576" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter11564">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.214375"
+         id="feGaussianBlur11566" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11542"
+       id="linearGradient11988"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,81979.512,-114.71393)"
+       x1="-16666.773"
+       y1="118.5857"
+       x2="-16668.836"
+       y2="116.9483" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11542">
+      <stop
+         style="stop-color:#333333;stop-opacity:1;"
+         offset="0"
+         id="stop11544" />
+      <stop
+         style="stop-color:#333333;stop-opacity:0;"
+         offset="1"
+         id="stop11546" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11530"
+       id="linearGradient11986"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.1453161,0,0,3.9074036,86605.425,-123.61977)"
+       x1="-16849.271"
+       y1="117.04774"
+       x2="-16848.875"
+       y2="117.335" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11530">
+      <stop
+         style="stop-color:#cc5750;stop-opacity:1;"
+         offset="0"
+         id="stop11532" />
+      <stop
+         style="stop-color:#cc5750;stop-opacity:0;"
+         offset="1"
+         id="stop11534" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11464"
+       id="linearGradient11984"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.3361601,0.20782968,0,2.4919164,56206.287,3690.7331)"
+       x1="-16808.109"
+       y1="75.549683"
+       x2="-16808.109"
+       y2="64.674683" />
+    <linearGradient
+       id="linearGradient11464"
+       inkscape:collect="always">
+      <stop
+         id="stop11466"
+         offset="0"
+         style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop
+         id="stop11468"
+         offset="1"
+         style="stop-color:#b09b86;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11518"
+       id="linearGradient11982"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,81979.512,-114.71393)"
+       x1="-16623.125"
+       y1="133.23718"
+       x2="-16627.236"
+       y2="134.92751" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11518">
+      <stop
+         style="stop-color:#666666;stop-opacity:1;"
+         offset="0"
+         id="stop11520" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1"
+         offset="1"
+         id="stop11522" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11464"
+       id="linearGradient11980"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.7317488,0.15332103,0,2.787398,62722.879,2765.6796)"
+       x1="-16808.109"
+       y1="75.549683"
+       x2="-16808.109"
+       y2="64.674683" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11470"
+       id="linearGradient11978"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(6.7392673,0,0,4.7721128,113423.14,-125.89683)"
+       x1="-16828.832"
+       y1="112.57307"
+       x2="-16832.588"
+       y2="112.4405" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11470">
+      <stop
+         style="stop-color:#7d6666;stop-opacity:1;"
+         offset="0"
+         id="stop11472" />
+      <stop
+         style="stop-color:#550000;stop-opacity:1"
+         offset="1"
+         id="stop11474" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11464"
+       id="linearGradient11976"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.7317488,0.15332103,0,2.787398,62754.2,2764.6025)"
+       x1="-16808.109"
+       y1="75.549683"
+       x2="-16808.109"
+       y2="64.674683" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11470"
+       id="linearGradient11974"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(6.7392673,0,0,4.7721128,113454.46,-126.97394)"
+       x1="-16828.832"
+       y1="112.57307"
+       x2="-16832.588"
+       y2="112.4405" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11464"
+       id="linearGradient11972"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.7262114,0.12378006,0,2.2503396,45856.47,2218.7107)"
+       x1="-16808.109"
+       y1="75.549683"
+       x2="-16808.109"
+       y2="64.674683" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11470"
+       id="linearGradient11970"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,82895.304,-115.73502)"
+       x1="-16828.832"
+       y1="112.57307"
+       x2="-16832.588"
+       y2="112.4405" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11420"
+       id="linearGradient11968"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-4.4446814,0,0,3.852652,-74684.113,-114.71393)"
+       x1="-16807.938"
+       y1="80.674683"
+       x2="-16803.875"
+       y2="80.643433" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11420">
+      <stop
+         style="stop-color:#c1726b;stop-opacity:1;"
+         offset="0"
+         id="stop11422" />
+      <stop
+         style="stop-color:#c1726b;stop-opacity:0;"
+         offset="1"
+         id="stop11424" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11420"
+       id="linearGradient11966"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,82777.091,-114.71393)"
+       x1="-16807.938"
+       y1="80.674683"
+       x2="-16803.875"
+       y2="80.643433" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11410"
+       id="linearGradient11964"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,82777.091,-114.71393)"
+       x1="-16808.109"
+       y1="75.549683"
+       x2="-16808.109"
+       y2="64.674683" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11410">
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:1"
+         offset="0"
+         id="stop11412" />
+      <stop
+         style="stop-color:#b09b86;stop-opacity:0;"
+         offset="1"
+         id="stop11414" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11464"
+       id="linearGradient11962"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.7262114,0.12378006,0,2.2503396,45826.875,2219.7325)"
+       x1="-16808.109"
+       y1="75.549683"
+       x2="-16808.109"
+       y2="64.674683" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11470"
+       id="linearGradient11960"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,82865.71,-114.71393)"
+       x1="-16828.832"
+       y1="112.57307"
+       x2="-16832.588"
+       y2="112.4405" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11394"
+       id="linearGradient11958"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,82668.782,-114.71393)"
+       x1="-16772.25"
+       y1="36.780071"
+       x2="-16795.555"
+       y2="33.003086" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11394">
+      <stop
+         style="stop-color:#343a4a;stop-opacity:1;"
+         offset="0"
+         id="stop11396" />
+      <stop
+         style="stop-color:#343a4a;stop-opacity:0;"
+         offset="1"
+         id="stop11398" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11384"
+       id="linearGradient11956"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,82668.782,-114.71393)"
+       x1="-16783.652"
+       y1="38.799683"
+       x2="-16811.152"
+       y2="35.539398" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11384">
+      <stop
+         style="stop-color:#424654;stop-opacity:1"
+         offset="0"
+         id="stop11386" />
+      <stop
+         style="stop-color:#434755;stop-opacity:1"
+         offset="1"
+         id="stop11388" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11374"
+       id="linearGradient11954"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9233393,0,0,3.852652,82865.71,-114.71393)"
+       x1="-16823.043"
+       y1="20.516615"
+       x2="-16822.246"
+       y2="51.010593" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11374">
+      <stop
+         style="stop-color:#e5d7e9;stop-opacity:1;"
+         offset="0"
+         id="stop11376" />
+      <stop
+         style="stop-color:#e5d7e9;stop-opacity:0;"
+         offset="1"
+         id="stop11378" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="120.185"
+     inkscape:cy="363.36373"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1400"
+     inkscape:window-height="978"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata38142">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(136.36357,119.05608)">
+    <path
+       id="path11864"
+       d="m 358.26394,509.17687 -71.36132,2.72459 -80.94831,12.93989 -329.85353,-2.04281 1.75062,-129.40143 -13.93487,-10.89708 85.296186,-89.2182 0,-166.17893 -17.404267,-10.21593 70.49556,-56.527588 35.674293,-130.082578 50.487655,142.34132 5.761109,13.077387 59.692694,55.983309 -22.15958,9.15029 11.38217,135.56486 22.77069,10.11344 57.24184,48.15776 136.00028,-8.1865 12.9227,73.2004 -6.15579,1.44506 4.92718,87.64774 -12.58531,10.405 z"
+       style="fill:#ffffff;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       id="path11866"
+       d="M 154.21895,142.40135 93.291285,89.909074 -69.789383,116.39616 4.0609872,60.532534 37.914643,-70.45718 l 4.914446,0 50.462196,154.587327 60.927665,58.271203 z"
+       style="fill:#807980;fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path11868"
+       d="m 37.11891,-58.82675 4.347884,-0.33739 20.44715,118.844921 -35.687024,4.543953 10.89199,-123.0483 z"
+       style="opacity:0.41304345;fill:url(#linearGradient11954);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path11870"
+       d="M 28.028459,61.380466 4.0800845,60.540809 35.45742,-59.32647 l 1.699685,1.181504 -9.128646,119.525432 z"
+       style="opacity:0.26956524;fill:url(#linearGradient11956);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="csscc"
+       id="path11872"
+       d="m 61.913944,58.84749 c 0,-1.686317 -21.421127,-122.623697 -20.498077,-118.047916 0,0.331025 4.780763,-0.94724 5.162715,0.165512 5.850227,17.084066 46.712703,143.408243 46.712703,143.408243 L 61.913944,58.849399 z"
+       style="fill:url(#linearGradient11958);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="cccccccccccccc"
+       id="path11874"
+       d="m 35.062737,-58.978894 2.915565,-11.316593 C 25.30387,-77.071948 33.662247,-83.440993 37.341715,-84.141238 l 0.127318,-19.022472 -11.382162,-1.08347 11.070234,-4.21356 1.546905,-10.59534 2.151662,10.59534 12.617139,3.4904 -12.776286,1.80663 1.387758,19.022472 c 3.189297,-0.560196 12.451627,7.200427 0.636586,13.605121 l 3.533054,11.557223 -11.216649,0 z"
+       style="fill:#595a65;fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:transform-center-y="3.5708197"
+       inkscape:transform-center-x="2.5266703"
+       sodipodi:nodetypes="ccccc"
+       id="path11876"
+       d="m 16.786346,336.72438 -23.6109837,1.1153 0,-35.80224 C -0.79616642,294.34302 4.258329,281.7176 15.825101,301.66822 l 0.961245,35.05044 z"
+       style="fill:url(#linearGradient11960);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:transform-center-y="-13.249683"
+       inkscape:transform-center-x="3.1059643"
+       style="fill:#7c3839;fill-opacity:1;stroke:none"
+       d="m 15.589564,304.19419 -22.4142017,0.22918 -0.1909759,-4.19639 c 7.06610719,-5.49628 9.8989163,-18.24073 22.8343476,-0.0828 l -0.318292,4.0506 z"
+       id="path11878"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:transform-center-y="-12.06357"
+       inkscape:transform-center-x="3.1218783"
+       sodipodi:nodetypes="cccccc"
+       id="path11880"
+       d="m 15.589564,304.51503 -22.4142017,-0.0955 0.1273173,-4.08498 C 0.35605541,296.3349 2.3358381,286.3023 15.277636,299.93988 l 0.318294,4.57579 0,0 z"
+       style="fill:url(#linearGradient11962);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#7d3539;fill-opacity:1;stroke:none"
+       d="m 47.387046,222.45079 -42.6385461,3.74631 0,-61.29498 C 15.646856,151.26071 24.769137,129.25138 45.655532,162.5181 l 1.731514,59.93269 z"
+       id="path11882"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path11884"
+       d="m 45.235384,166.85135 -40.4868841,2.13638 -0.3182927,-7.1686 c 12.7444568,-9.95939 17.8626098,-31.998 41.2062268,-1.9193 l -0.381951,6.95152 z"
+       style="fill:#333333;fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:url(#linearGradient11964);fill-opacity:1;stroke:none"
+       d="m 45.235384,167.40136 -40.4868841,1.58637 0.3819519,-7.00945 C 17.881274,154.58306 21.458889,137.25264 44.808872,159.58981 l 0.445611,7.81155 0,0 z"
+       id="path11886"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="opacity:0.33913042;fill:url(#linearGradient11966);fill-opacity:1;stroke:none"
+       d="m 45.903801,221.86258 -20.307102,1.92568 -1.839734,-54.89984 20.918224,-0.72252 1.228612,53.69668 z"
+       id="path11888"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       id="path11890"
+       d="m 3.4498645,225.7152 20.7909065,-1.68568 -1.718783,-55.38173 -17.6589026,-0.4838 -1.4132209,57.5493 z"
+       style="opacity:0.43913042;fill:url(#linearGradient11968);fill-opacity:1;stroke:none"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:url(#linearGradient11970);fill-opacity:1;stroke:none"
+       d="m 46.374874,335.70267 -23.61735,1.11593 0,-35.80288 c 6.041204,-7.69315 11.082967,-20.32047 22.656105,-0.36285 l 0.961245,35.05107 z"
+       id="path11892"
+       sodipodi:nodetypes="ccccc"
+       inkscape:transform-center-x="2.5305962"
+       inkscape:transform-center-y="3.5718055"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path11894"
+       d="m 45.178092,303.17247 -22.420568,0.22917 -0.190975,-4.19637 c 7.059741,-5.49692 9.89255,-18.24139 22.821616,-0.0827 l -0.318292,4.04996 z"
+       style="fill:#7c3839;fill-opacity:1;stroke:none"
+       inkscape:transform-center-x="3.1194382"
+       inkscape:transform-center-y="-13.250035"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:url(#linearGradient11972);fill-opacity:1;stroke:none"
+       d="m 45.178092,303.49331 -22.420568,-0.0891 0.127318,-4.08625 c 7.059742,-3.99903 9.039524,-14.03163 21.974957,-0.39469 l 0.318293,4.57515 0,0 z"
+       id="path11896"
+       sodipodi:nodetypes="cccccc"
+       inkscape:transform-center-x="3.1289872"
+       inkscape:transform-center-y="-12.058936"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:transform-center-y="4.4240004"
+       inkscape:transform-center-x="3.46497"
+       sodipodi:nodetypes="ccccc"
+       id="path11898"
+       d="m 47.482534,432.2015 -32.313117,1.38267 0,-44.34715 c 8.256523,-9.52969 15.176216,-25.16998 31.014481,-0.45197 l 1.298636,43.41582 z"
+       style="fill:url(#linearGradient11974);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:transform-center-y="-16.413667"
+       inkscape:transform-center-x="4.3179955"
+       style="fill:#7c3839;fill-opacity:1;stroke:none"
+       d="m 45.852874,391.90814 -30.683457,0.28646 -0.318293,-5.19709 c 9.669745,-6.80829 13.533823,-22.59435 31.243652,-0.10822 l -0.381952,5.0163 z"
+       id="path11900"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:transform-center-y="-14.940107"
+       inkscape:transform-center-x="4.20341"
+       sodipodi:nodetypes="cccccc"
+       id="path11902"
+       d="m 45.852874,392.306 -30.683457,-0.10822 0.318293,-5.06086 c 9.657014,-4.95391 12.381603,-17.38007 30.072334,-0.49654 l 0.44561,5.66753 0,0 z"
+       style="fill:url(#linearGradient11976);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:url(#linearGradient11978);fill-opacity:1;stroke:none"
+       d="m 16.175223,433.27987 -32.332215,1.38203 0,-44.34778 c 8.2692553,-9.52969 15.17621558,-25.16935 31.008116,-0.45197 l 1.324099,43.41582 z"
+       id="path11904"
+       sodipodi:nodetypes="ccccc"
+       inkscape:transform-center-x="3.4627833"
+       inkscape:transform-center-y="4.4239848"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path11906"
+       d="m 14.532831,392.98524 -30.689823,0.28646 -0.254634,-5.19709 c 9.6633787,-6.80829 13.5465547,-22.59372 31.250018,-0.10822 l -0.381952,5.0163 z"
+       style="fill:#7c3839;fill-opacity:1;stroke:none"
+       inkscape:transform-center-x="4.2585158"
+       inkscape:transform-center-y="-16.41368"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:url(#linearGradient11980);fill-opacity:1;stroke:none"
+       d="m 14.532831,393.38375 -30.689823,-0.10823 0.318293,-5.06085 c 9.6697451,-4.95456 12.3816025,-17.38072 30.085066,-0.49654 l 0.381951,5.66689 0,0 z"
+       id="path11908"
+       sodipodi:nodetypes="cccccc"
+       inkscape:transform-center-x="4.2362358"
+       inkscape:transform-center-y="-14.940172"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:transform-center-y="3.7328252"
+       inkscape:transform-center-x="3.1008502"
+       sodipodi:nodetypes="ccccc"
+       id="path11910"
+       d="m 146.87911,416.53257 -28.90102,0.62385 0,-39.64659 c 7.39714,-8.3622 13.56566,-22.21367 27.7297,0.18461 l 1.17132,38.83876 z"
+       style="opacity:0.8043478;fill:url(#linearGradient11982);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:transform-center-y="-14.736535"
+       inkscape:transform-center-x="3.7119702"
+       style="opacity:0.8043478;fill:#2e2e2e;fill-opacity:1;stroke:none"
+       d="m 145.42133,380.47823 -27.44324,-0.33103 -0.12731,-4.65025 c 8.63847,-5.90308 12.10787,-19.94235 27.9334,0.5029 l -0.38195,4.47711 z"
+       id="path11912"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:transform-center-y="-13.288632"
+       inkscape:transform-center-x="3.7278852"
+       sodipodi:nodetypes="cccccc"
+       id="path11914"
+       d="m 145.42133,380.83408 -27.44324,-0.68241 0.38196,-4.5185 c 8.62574,-4.2454 11.05113,-15.30353 26.88303,0.13369 l 0.38196,5.0755 0,0 z"
+       style="opacity:0.8043478;fill:url(#linearGradient11984);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path11916"
+       d="m 123.45274,233.9017 -13.53383,-6.74144 -1.24134,-55.38237 c 2.13256,-10.84552 3.48212,-26.80538 13.54019,14.44732 l 1.23498,47.67649 z"
+       style="fill:#4a3245;fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       id="path11918"
+       d="m -49.043037,308.13211 -76.861423,83.57932 -10.45911,-9.32471 85.499896,-89.10489 1.820637,14.85028 z"
+       style="fill:url(#linearGradient11986);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       style="opacity:0.05652173;fill:url(#linearGradient11988);fill-opacity:1;stroke:none"
+       d="m -49.043037,308.13211 -76.205743,82.89817 -11.11479,-8.64356 85.499896,-89.10489 1.820637,14.85028 z"
+       id="path11920"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path11922"
+       d="m 89.389003,102.87061 c 6.257645,20.49298 -5.079955,43.00776 14.978877,59.51636 l 32.00119,24.07887 -5.52557,-44.30513 -41.454497,-39.2901 z"
+       style="opacity:0.13913042;fill:#a1a8b5;fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="matrix(4.9595061,0,0,3.8525233,82581.086,-114.69865)"
+       id="path11924"
+       d="m -16632.875,102.98719 22.25,24 19,7.625 12.5,-0.875 0.375,-16.625 -27.25,1.625 -16.625,-15.25 0.75,5.375 -11,-5.875 z"
+       style="fill:#dc3d2d;fill-opacity:1;stroke:#800000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter11564)"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="matrix(4.9595061,0,0,3.8525233,82581.086,-114.69865)"
+       id="path11926"
+       d="m -16605.875,118.86219 14.5,15.625"
+       style="fill:none;stroke:#800000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter11574)"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccscccccccc"
+       id="path11928"
+       d="m -124.10292,523.81963 329.85352,2.0428 c 0,0 83.1127,-13.6204 84.86331,-13.6204 1.73788,0 67.01344,-2.0428 67.01344,-2.0428 l 13.92851,-9.53543 -1.74425,-18.04849 -13.4829,10.89708 -67.0198,0.68178 -83.98482,4.76677 -329.0196,2.45976 -0.38195,22.39893 z"
+       style="fill:#cccccc;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="opacity:0.46521738;fill:url(#linearGradient11990);fill-opacity:1;stroke:none"
+       d="m -124.10292,523.81963 329.85352,2.0428 -0.44561,-26.90149 -329.0196,2.45976 -0.38194,22.39893 0,0 z"
+       id="path11930"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccc"
+       id="path11932"
+       d="m 199.26379,374.35873 -4.42427,7.38885 6.15578,144.71451"
+       style="fill:none;stroke:#800000;stroke-width:4.35521746px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#800000;stroke-width:4.35521746px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 293.25575,403.64424 -5.29003,10.11344 4.35425,98.22017"
+       id="path11934"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="cccccc"
+       id="path11936"
+       d="m -53.594628,125.23007 3.13837,1.95813 -0.127317,8.2578 142.28976,-20.81192 -1.801546,-11.28284 -143.441974,21.87883 z"
+       style="opacity:0.85652173;fill:#edeff1;fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccccc"
+       id="path11938"
+       d="m -16635.405,-230.60708 -2.813,-2.125 33.069,-6.82766 11.966,13.44508 -2.942,1.57008 -9.938,-11.54955 -29.342,5.48705 z"
+       style="opacity:0.41739131;fill:#e6e6e6;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter11558)"
+       transform="matrix(4.9233393,0,0,3.852652,81846.58,1013.2724)"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="matrix(5.7170875,0,0,4.0200651,96099.715,-142.10369)"
+       sodipodi:nodetypes="ccccc"
+       id="path11940"
+       d="m -16796.06,165.82706 -0.177,-14.84924 c -5.359,-11.10519 -15.816,-10.37043 -20.859,0.17677 l -0.177,14.49569 21.213,0.17678 z"
+       style="fill:#ffffff;stroke:#2b0000;stroke-width:0.30000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter11836)"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="cccccc"
+       id="path11942"
+       d="m 34.680785,434.72175 c 36.037147,11.15935 39.366493,16.13491 48.972581,27.9073 l 2.259882,57.33222 -9.847992,5.17737 -1.069464,-58.87341 C 68.407124,451.65748 48.571096,439.39938 34.680785,434.72175 z"
+       style="fill:url(#linearGradient11992);fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="opacity:0.65217393;fill:url(#radialGradient11994);fill-opacity:1;stroke:#2b0000;stroke-width:0.30000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter11836)"
+       d="m -16796.06,165.82706 -0.177,-14.84924 c -5.359,-11.10519 -15.816,-10.37043 -20.859,0.17677 l -0.177,14.49569 21.213,0.17678 z"
+       id="path11944"
+       sodipodi:nodetypes="ccccc"
+       transform="matrix(5.7170875,0,0,4.0200651,96099.715,-142.10369)"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#312b2c;fill-opacity:1;stroke:none"
+       d="m 50.614538,523.98323 -0.636585,-58.16425 c -3.673103,1.12421 -43.351523,-5.20472 -73.462052,1.18723 l -0.636586,56.53141 74.728858,0.45197 z"
+       id="path11946"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       y="442.08923"
+       x="9.6425333"
+       height="14.324189"
+       width="6.1858315"
+       id="rect11948"
+       style="opacity:0.98000004;fill:#2e0724;fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       transform="matrix(0,1,-1,0,0,0)"
+       style="opacity:0.98000004;fill:#2e0724;fill-opacity:1;stroke:none"
+       id="rect11950"
+       width="4.8405876"
+       height="18.305014"
+       x="446.83255"
+       y="-21.901793"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path11952"
+       d="m 17.117371,523.98323 0,-58.16425 c -0.381952,1.12421 -4.481567,-5.20472 -7.5944738,1.18723 l 0,56.53141 7.7217908,0.45197 z"
+       style="opacity:0.56521738;fill:#523c38;fill-opacity:1;stroke:none"
+       inkscape:export-filename="E:\PEKNA_STRANKA\PROJEKTY\Svadobne_salony\Sablona\vzhlad-katalogu\ikony\miesta-svadobneho-obradu-big.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>
