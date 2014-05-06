@@ -1,7 +1,22 @@
-<div class="container">
-    <div class="gallery">This will be a gallery</div>
-    <div class="info-box">Here I will store services and hours of them</div>
-    <div class="news">
-        Here will be news itarated foreach
-    </div>
+<div class="displayTable margin-b-20">
+	<div data-slide-show></div>
+	<ng-include src="'/views/elements/services.html'"></ng-include>
+</div>
+<div class="news margin-b-20">
+	<div class="news-position margin-b-20" ng-repeat="article in articles">
+		<div class="media">
+			<a ng-if="article.image" class="pull-left" href="#"> 
+				<img class="media-object" src="{{article.image.src}}" alt="{{article.image.title}}">
+			</a> 
+			<div class="media-body">
+				<h4 class="media-heading">{{article.title}}</h4>
+				{{article.content}}
+			</div>
+			<div class="pull-right">
+				<span class="author">{{article.author}}</span>
+				&nbsp;
+				<span class="created">{{article.created}}</span>
+			</div>
+		</div>
+	</div>
 </div>

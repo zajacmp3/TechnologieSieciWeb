@@ -8,6 +8,9 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 //static elements css'es
 @import "./menu-bar.scss";
+@import "./slideshow.scss";
+@import "./services.scss";
+@import "./news.scss";
 
 /* app css stylesheet */
 
@@ -15,16 +18,10 @@ body {
     font-size: 20px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
 .container .header .menu {
     width: 100%;
     font-weight: 700;
     background-color: rgb(31, 207, 223);
-    padding: 10px 0;
 }
 
 .container .header .menu .item {
@@ -34,4 +31,18 @@ body {
 
 .container .header .menu .item:hover {
     background-color: rgb(118, 226, 238);
+}
+
+.displayTable {
+	display: table;
+}
+
+.margin-b-10 {
+	margin-bottom: 10px;
+}
+.margin-b-20 {
+	margin-bottom: 20px;
+}
+.margin-b-30 {
+	margin-bottom: 30px;
 }
