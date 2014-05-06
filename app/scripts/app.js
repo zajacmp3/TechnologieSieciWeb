@@ -6,7 +6,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'ngAnimate'
+    'ngAnimate',
+    'simplePagination'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
