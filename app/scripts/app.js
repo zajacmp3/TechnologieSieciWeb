@@ -14,6 +14,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/page/:number', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
       .when('/patron', {
           templateUrl: 'views/static/patron.html',
           controller: 'StaticCtrl'
@@ -46,6 +50,5 @@ angular
         redirectTo: '/'
       });
     $locationProvider
-    .html5Mode(true)
-    .hashPrefix('');
+    .html5Mode(true);
   });
