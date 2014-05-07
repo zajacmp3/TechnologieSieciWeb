@@ -19,11 +19,15 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/patron', {
-          templateUrl: 'views/static/patron.html',
-          controller: 'StaticCtrl'
+      .when('/service', {
+          templateUrl: 'views/service/service.html',
+          controller: 'ServiceCtrl'
       })
-      .when('/msze', {
+      .when('/service/:id', {
+          templateUrl: '/views/service/reservation.html',
+          controller: 'ReservationCtrl'
+      })
+      .when('/patron', {
           templateUrl: 'views/static/patron.html',
           controller: 'StaticCtrl'
       })

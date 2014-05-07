@@ -10,6 +10,9 @@
 			<td>
 			Nazwa
 			</td>
+			<td>
+			Rezerwacja
+			</td>
 		</tr>
 		<tr ng-repeat="service in services">
 			<td>
@@ -20,6 +23,9 @@
 			</td>
 			<td>
 			{{service.name}}
+			</td>
+			<td>
+				<a ng-href="/service/{{service.id}}">Rezerwuj</a>
 			</td>
 		</tr>
 	</table>
