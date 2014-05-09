@@ -1,13 +1,24 @@
 // Generated on 2014-04-27 using generator-angular 0.8.0
 'use strict';
 
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to recursively match all subfolders:
-// 'test/spec/**/*.js'
+var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+var mountFolder = function (connect, dir) {
+  return connect.static(require('path').resolve(dir));
+};
 
 module.exports = function (grunt) {
+	
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  
+  // configurable paths
+  var yeomanConfig = {
+    app: 'app',
+    dist: 'dist'
+  };
+
+  try {
+    yeomanConfig.app = require('./bower.json').appPath || yeomanConfig.app;
+  } catch (e) {}
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -19,11 +30,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     // Project settings
-    yeoman: {
-      // configurable paths
-      app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
-    },
+    yeoman: yeomanConfig,
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -57,10 +64,27 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-        ]
+        ],
+        tasks: ['livereload']
+      },
+      server: {
+        files: [ 'server/**/*' ],
+        tasks: [ 'express:dev', 'livereload-start' ]
       }
     },
 
+    express: {
+        options: {
+          // Override defaults here
+          background: true,
+          port: 9000
+        },
+        dev: {
+          options: {
+            script: 'server/server.js'
+          }
+        }
+    },
     // The actual grunt server settings
     connect: {
       options: {
@@ -375,30 +399,22 @@ module.exports = function (grunt) {
   });
 
 
-  grunt.registerTask('serve', function (target) {
-    if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
-    }
+  grunt.renameTask('regarde', 'watch');
 
-    grunt.task.run([
-      'clean:server',
-      'bowerInstall',
-      'concurrent:server',
-      'autoprefixer',
+  grunt.registerTask('server', [
+    'clean:server',
+    'bowerInstall',
+    'concurrent:server',
+    'autoprefixer',
+    'livereload-start',
       'connect:livereload',
-      'watch'
-    ]);
-  });
-
-  grunt.registerTask('server', function (target) {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run(['serve:' + target]);
-  });
+    'watch'
+  ]);
 
   grunt.registerTask('test', [
     'clean:server',
-    'concurrent:test',
     'autoprefixer',
+    'compass',
     'connect:test',
     'karma'
   ]);
@@ -406,18 +422,22 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'bowerInstall',
-    'useminPrepare',
-    'concurrent:dist',
     'autoprefixer',
-    'concat',
-    'ngmin',
-    'copy:dist',
-    'cdnify',
+    'jshint',
+    'test',
+    'compass:dist',
+    'useminPrepare',
+    'imagemin',
     'cssmin',
+    'htmlmin',
+    'concat',
+    'copy:dist',
+    'copy',
+    'cdnify',
+    'ngmin',
     'uglify',
     'rev',
-    'usemin',
-    'htmlmin'
+    'usemin'
   ]);
 
   grunt.registerTask('default', [
