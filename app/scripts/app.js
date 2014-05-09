@@ -7,7 +7,8 @@ angular
     'ngSanitize',
     'ngRoute',
     'ngAnimate',
-    'simplePagination'
+    'simplePagination',
+    'btford.socket-io',
   ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -56,4 +57,7 @@ angular
       });
     $locationProvider
     .html5Mode(true);
-  });
+  })
+  .factory('mySocket', function (socketFactory) {
+	  return socketFactory();
+});
