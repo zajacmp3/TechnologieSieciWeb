@@ -182,8 +182,8 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
       options: {
-        sassDir: '<%= yeoman.app %>/styles',
-        cssDir: '.tmp/styles',
+        sassDir: '<%= yeoman.app %>/styles/scss',
+        cssDir: '<%= yeoman.app %>/styles',
         generatedImagesDir: '.tmp/images/generated',
         imagesDir: '<%= yeoman.app %>/images',
         javascriptsDir: '<%= yeoman.app %>/scripts',
@@ -404,10 +404,12 @@ module.exports = function (grunt) {
   grunt.registerTask('server', [
     'clean:server',
     'bowerInstall',
-    'concurrent:server',
     'autoprefixer',
     'livereload-start',
-      'connect:livereload',
+    'concurrent:server',
+    'compass',
+    'autoprefixer',
+    'express:dev',
     'watch'
   ]);
 
@@ -431,7 +433,6 @@ module.exports = function (grunt) {
     'cssmin',
     'htmlmin',
     'concat',
-    'copy:dist',
     'copy',
     'cdnify',
     'ngmin',
