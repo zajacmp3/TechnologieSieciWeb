@@ -9,6 +9,16 @@ CREATE TABLE `articles` (
 )
 ENGINE = InnoDB;
 
-ALTER TABLE `tsw`.`articles` ADD COLUMN `image_src` VARCHAR(512)  AFTER `modified`,
+ALTER TABLE `articles` ADD COLUMN `image_src` VARCHAR(512)  AFTER `modified`,
  ADD COLUMN `image_title` VARCHAR(128)  AFTER `image_src`;
+
+CREATE TABLE `services` (
+  `id` INTEGER  NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(32)  NOT NULL,
+  `dayName` VARCHAR(32)  NOT NULL,
+  `time` TIME  NOT NULL,
+  `is_cyclic` BOOLEAN  NOT NULL,
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
 
