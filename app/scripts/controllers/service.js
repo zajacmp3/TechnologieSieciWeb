@@ -13,7 +13,7 @@ angular.module('tswApp').controller('ServiceCtrl', function($scope) {
 	                  ];
 });
 
-angular.module('tswApp').controller('ReservationCtrl', function($scope, $routeParams) {
+angular.module('tswApp').controller('ReservationCtrl', function($scope, $routeParams, $http) {
 	$scope.id = $routeParams.id;
 	$scope.services = [{'id' : '1', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '11:00'},
 	                   {'id' : '2', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '12:00'},
