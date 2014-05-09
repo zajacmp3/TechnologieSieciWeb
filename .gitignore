@@ -6,3 +6,7 @@ app/bower_components
 /.project
 /.tern-project
 /TechnologieSieciWeb.iml
+/.bowerrc
+/.editorconfig
+/.jshintrc
+/.travis.yml
