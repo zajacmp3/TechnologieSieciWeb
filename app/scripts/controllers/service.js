@@ -1,30 +1,16 @@
 'use strict';
 
-angular.module('tswApp').controller('ServiceCtrl', function($scope) {
-	$scope.services = [{'id' : '1', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '11:00'},
-	                   {'id' : '2', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '12:00'},
-	                   {'id' : '3', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '16:00'},
-	                   {'id' : '4', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '18:00'},
-	                   {'id' : '5', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '19:00'},
-	                   {'id' : '6', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '21:00'},
-	                   {'id' : '7', 'name' : 'Msza św.', 'dayName' : 'Poniedziałek-Sobota', 'hour' : '06:00'},
-	                   {'id' : '8', 'name' : 'Msza św.', 'dayName' : 'Poniedziałek-Sobota', 'hour' : '11:00'},
-	                   {'id' : '9', 'name' : 'Msza św.', 'dayName' : 'Poniedziałek-Sobota', 'hour' : '18:00'},
-	                  ];
-});
+angular.module('tswApp').controller('ServiceCtrl', ['$scope', '$http', function($scope, $http) {
+	$http.get("/server/serviceSelect").success(function(data){
+		$scope.services = data.rows;
+	});
+}]);
 
-angular.module('tswApp').controller('ReservationCtrl', function($scope, $routeParams, $http) {
+angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$http', function($scope, $routeParams, $http) {
 	$scope.id = $routeParams.id;
-	$scope.services = [{'id' : '1', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '11:00'},
-	                   {'id' : '2', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '12:00'},
-	                   {'id' : '3', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '16:00'},
-	                   {'id' : '4', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '18:00'},
-	                   {'id' : '5', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '19:00'},
-	                   {'id' : '6', 'name' : 'Msza św.', 'dayName' : 'Niedziela', 'hour' : '21:00'},
-	                   {'id' : '7', 'name' : 'Msza św.', 'dayName' : 'Poniedziałek-Sobota', 'hour' : '06:00'},
-	                   {'id' : '8', 'name' : 'Msza św.', 'dayName' : 'Poniedziałek-Sobota', 'hour' : '11:00'},
-	                   {'id' : '9', 'name' : 'Msza św.', 'dayName' : 'Poniedziałek-Sobota', 'hour' : '18:00'},
-	                  ];
+	$http.get("/server/serviceSelect").success(function(data){
+		$scope.services = data.rows;
+	});
 	$scope.seats = [{'id' : '1', 'seats' : [
 	                                        {'id' : '1', 'is_reserved' : false},
 	                                        {'id' : '2', 'is_reserved' : false},
@@ -53,4 +39,4 @@ angular.module('tswApp').controller('ReservationCtrl', function($scope, $routePa
 	$scope.change = function(rowId, seatId) {
 		$scope.seats[rowId-1].seats[seatId-1].is_reserved = true;
 	};
-});
+}]);

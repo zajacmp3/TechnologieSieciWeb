@@ -22,3 +22,13 @@ CREATE TABLE `services` (
 )
 ENGINE = InnoDB;
 
+CREATE TABLE `tsw`.`reservation` (
+  `id` INTEGER  NOT NULL AUTO_INCREMENT,
+  `service_id` INTEGER  NOT NULL,
+  `row` INTEGER  NOT NULL,
+  `seat` INTEGER  NOT NULL,
+  `name` VARCHAR(64) ,
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
+

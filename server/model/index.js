@@ -50,3 +50,28 @@ exports.serviceUpdate = function(req, res) {
 	    res.send({ err : err, rows: rows });
 	});
 };
+
+//Reservation
+exports.reservationSelect = function(req, res) {
+	connection.query(config.jsonToQuery('select', 'reservation', req.query), function(err, rows){
+	    res.send({ err : err, rows: rows });
+	});
+};
+
+exports.reservationInsert = function(req, res) {
+	connection.query(config.jsonToQuery('insert', 'reservation', req.query), function(err, rows){
+	    res.send({ err : err, rows: rows });
+	});
+};
+
+exports.reservationDelete = function(req, res) {
+	connection.query(config.jsonToQuery('delete', 'reservation', req.query), function(err, rows){
+	    res.send({ err : err, rows: rows });
+	});
+};
+
+exports.reservationUpdate = function(req, res) {
+	connection.query(config.jsonToQuery('update', 'reservation', req.query), function(err, rows){
+	    res.send({ err : err, rows: rows });
+	});
+};
