@@ -1,8 +1,8 @@
-var express = require('express')
-  , http = require('http')
-  , path = require('path')
-  , routes = require('./routes')
-  , model = require('./model');
+var express = require('express'),
+	http = require('http'),
+	path = require('path'),
+	routes = require('./routes'),
+	model = require('./model');
 
 var app = express();
 
@@ -45,6 +45,14 @@ app.get('/server/reservationInsert', model.reservationInsert);
 app.get('/server/reservationDelete', model.reservationDelete);
 app.get('/server/reservationUpdate', model.reservationUpdate);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+var server = http.createServer(app);
+
+var io = require('socket.io').listen(server);
+
+server.listen(app.get('port'), function(){
+	console.log('Express server listening on port ' + app.get('port'));
+});
+
+io.sockets.on('connection', function (socket) {
+    console.log('io.socket connection');
 });

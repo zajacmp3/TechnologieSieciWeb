@@ -6,7 +6,7 @@ angular.module('tswApp').controller('ServiceCtrl', ['$scope', '$http', function(
 	});
 }]);
 
-angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$http', function($scope, $routeParams, $http) {
+angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$http', 'socket', function($scope, $routeParams, $http, socket) {
 	$scope.id = $routeParams.id;
 	$http.get("/server/serviceSelect").success(function(data){
 		$scope.services = data.rows;

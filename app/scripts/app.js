@@ -57,7 +57,4 @@ angular
       });
     $locationProvider
     .html5Mode(true);
-  })
-  .factory('mySocket', function (socketFactory) {
-	  return socketFactory();
-});
+  });
