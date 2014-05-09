@@ -1,7 +1,10 @@
 <div class="service-reservation table-responsive">
 	<table>
-		<tr ng-repeat="seatrow in services">
-			{{seatrow.id}}
+		<tr ng-repeat="seatrow in seats">
+			<td class="seat" ng-repeat="seat in seatrow.seats">
+				<input type="checkbox" ng-model="seats" ng-change="change(seatrow.id,seat.id)">
+			 [{{seatrow.id}}/{{seat.id}} - {{seat.is_reserved}}] 
+			</td>
 		</tr>
 	</table>
 </div>

@@ -50,4 +50,7 @@ angular.module('tswApp').controller('ReservationCtrl', function($scope, $routePa
 	                                        {'id' : '6', 'is_reserved' : false},
 	                                        ]},
 					];
+	$scope.change = function(rowId, seatId) {
+		$scope.seats[rowId-1].seats[seatId-1].is_reserved = true;
+	};
 });
