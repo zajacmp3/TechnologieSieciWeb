@@ -24,4 +24,5 @@ Docs
 ===
 http://jjt.io/2013/11/14/easy-angular-development-yeoman-generator-angular/
 https://docs.angularjs.org/
+https://github.com/obazoud/grunt-angular-express-starter
 
