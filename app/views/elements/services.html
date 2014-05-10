@@ -1,32 +1,32 @@
 <div class="services table-responsive">
-	<table>
-		<tr>
-			<td>
+	<div class="table">
+		<div class="row service-header">
+			<div class="cell padding-b-10 padding-t-10 padding-l-10">
 			Dzień
-			</td>
-			<td>
+			</div>
+			<div class="cell padding-b-10 padding-t-10">
 			Godzina
-			</td>
-			<td>
+			</div>
+			<div class="cell padding-b-10 padding-t-10">
 			Nazwa
-			</td>
-			<td>
+			</div>
+			<div class="cell padding-b-10 padding-t-10">
 			Rezerwacja
-			</td>
-		</tr>
-		<tr ng-repeat="service in services">
-			<td>
+			</div>
+		</div>
+		<div class="row regular-row" ng-repeat="service in services">
+			<div class="cell padding-l-10">
 			{{service.dayName}}
-			</td>
-			<td>
+			</div>
+			<div class="cell">
 			{{service.time}}
-			</td>
-			<td>
+			</div>
+			<div class="cell">
 			{{service.name}}
-			</td>
-			<td>
+			</div>
+			<div class="cell">
 				<a ng-href="/service/{{service.id}}">Rezerwuj</a>
-			</td>
+			</div>
 		</tr>
-	</table>
+	</div>
 </div>

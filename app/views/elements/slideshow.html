@@ -3,14 +3,18 @@
 		data-cycle-fx="scrollHorz" 
 	    data-cycle-timeout="0"
 	    data-cycle-slides="> img">
-		<img ng-repeat="image in images" src="{{image.url}}" alt="{{image.name}}">
+	    
+	    <div class="cycle-overlay">
+	    </div>
+	    
+		<img ng-repeat="image in images" src="{{image.url}}" alt="{{image.name}}" data-cycle-title="Tytuł obrazka" data-cycle-desc="Krótki opis">
 	</div>
-	<div class="arrows">
-			<a class="prev" href="#" ng-click="slideShowPrev()"> 
-				&lt;
-			</a> 
-			<a class="next" href="#" ng-click="slideShowNext()"> 
-				&gt;
-			</a>
-		</div>
+   	<div class="arrows">
+		<a class="prev" href="#" ng-click="slideShowPrev()"> 
+			&lt;
+		</a> 
+		<a class="next" href="#" ng-click="slideShowNext()"> 
+			&gt;
+		</a>
+	</div>
 </div>
