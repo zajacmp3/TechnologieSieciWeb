@@ -1,0 +1,21 @@
+.service-reservation {
+	width: 50%;
+	margin: 0 auto;
+	> .table {
+		display: table;
+		> .seatrow {
+			display: table-row;
+			border: 5px solid white;
+			> .seat {
+				text-align: center;
+				border: 5px solid white;
+				display: table-cell;
+				margin-bottom: 20px;
+				background-color: green;
+			}
+			> .reserved {
+				background-color: red;
+			}
+		}
+	}
+}

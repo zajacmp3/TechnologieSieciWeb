@@ -1,10 +1,12 @@
-<div class="service-reservation table-responsive">
-	<table>
-		<tr ng-repeat="seatrow in seats">
-			<td class="seat" ng-repeat="seat in seatrow.seats">
+<div class="service-reservation">
+	<div class="table">
+		<div ng-repeat="seatrow in seats" class="seatrow">
+			Rząd {{seatrow.id}}
+			<div class="seat" ng-repeat="seat in seatrow.seats" ng-class="{'reserved': seat.is_reserved == true}">
 				<input type="checkbox" ng-model="seat.is_reserved" ng-change="change(seatrow.id,seat.id,seat.is_reserved)" checked="false">
-			 [{{seatrow.id}}/{{seat.id}} - {{seat.is_reserved}}] 
-			</td>
-		</tr>
-	</table>
+			 <div class="seat-info">[{{seat.id}}]</div>
+			 
+			</div>
+		</div>
+	</div>
 </div>

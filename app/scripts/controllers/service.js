@@ -35,6 +35,34 @@ angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$routeParams'
 	                                        {'id' : '5', 'is_reserved' : false},
 	                                        {'id' : '6', 'is_reserved' : false},
 	                                        ]},
+                    {'id' : '4', 'seats' : [
+	                                        {'id' : '1', 'is_reserved' : false},
+	                                        {'id' : '2', 'is_reserved' : false},
+	                                        {'id' : '3', 'is_reserved' : false},
+	                                        {'id' : '4', 'is_reserved' : false},
+	                                        {'id' : '5', 'is_reserved' : false},
+	                                        {'id' : '6', 'is_reserved' : false},
+	                                        ]},
+                    {'id' : '5', 'seats' : [
+	                                        {'id' : '1', 'is_reserved' : false},
+	                                        {'id' : '2', 'is_reserved' : false},
+	                                        {'id' : '3', 'is_reserved' : false},
+	                                        {'id' : '4', 'is_reserved' : false},
+	                                        {'id' : '5', 'is_reserved' : false},
+	                                        {'id' : '6', 'is_reserved' : false},
+	                                        ]},
+                    {'id' : '6', 'seats' : [
+	                                        {'id' : '1', 'is_reserved' : false},
+	                                        {'id' : '2', 'is_reserved' : false},
+	                                        {'id' : '3', 'is_reserved' : false},
+	                                        {'id' : '4', 'is_reserved' : false},
+	                                        {'id' : '5', 'is_reserved' : false},
+	                                        {'id' : '6', 'is_reserved' : false},
+	                                        {'id' : '7', 'is_reserved' : false},
+	                                        {'id' : '8', 'is_reserved' : false},
+	                                        {'id' : '9', 'is_reserved' : false},
+	                                        {'id' : '10', 'is_reserved' : false},
+	                                        ]},
 					];
 	$scope.seats = $scope.defaultSeats;
 	
