@@ -16,6 +16,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/search/:string', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
       .when('/page/:number', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
