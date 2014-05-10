@@ -16,26 +16,27 @@ var app = angular.module('tswApp').controller('MainCtrl', ['$scope', 'Pagination
 		$scope.articles = data.rows;
 		$scope.pagination.numPages = Math.ceil($scope.articles.length/$scope.pagination.perPage);
 	});
+	
+	//This is not the proper place for functions like it. Should be in slideShow component.
+	$scope.slideShowNext = function(){
+		$('.cycle-slideshow').cycle('next');
+	};
+	$scope.slideShowPrev = function(){
+		$('.cycle-slideshow').cycle('prev');
+	};
 }]);
 
-app.directive('slideShow', function() {
+app.directive('slideShow', function($timeout) {
 	return {
 		restrict : 'AE',
 		replace : 'true',
 		templateUrl : '/views/elements/slideshow.html',
 		link: function(scope, elem, attrs) {
-			scope.next = function() {
-			  currentIndex < scope.images.length - 1 ? currentIndex++ : currentIndex = 0;
-			};
-			scope.prev = function() {
-			  currentIndex > 0 ? currentIndex-- : currentIndex = scope.images.length - 1;
-			};
-			scope.$watch('currentIndex', function() {
-			  scope.images.forEach(function(image) {
-			    image.visible = false; // make every image invisible
-			  });
-			  scope.images[currentIndex].visible = true; // make the current image visible
-			});
+			//timeout here is just horrible. It is just a huge sign how not mature angular really is
+			//https://github.com/angular/angular.js/issues/1306
+			$timeout(function(){
+				$('.cycle-slideshow').cycle();
+		    },0);
 		}
 	};
 });

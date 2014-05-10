@@ -1,15 +1,16 @@
 <div id="slides">
-	<div class="slides_container">
-		<div class="slide" ng-repeat="image in images" ng-show="image.visible">
-			<img src="{{image.url}}" alt="{{image.name}}">
-		</div>
-		<div class="arrows">
-			<a class="prev" href="#" ng-click="prev()"> 
+	<div class="cycle-slideshow"
+		data-cycle-fx="scrollHorz" 
+	    data-cycle-timeout="0"
+	    data-cycle-slides="> img">
+		<img ng-repeat="image in images" src="{{image.url}}" alt="{{image.name}}">
+	</div>
+	<div class="arrows">
+			<a class="prev" href="#" ng-click="slideShowPrev()"> 
 				&lt;
 			</a> 
-			<a class="next" href="#" ng-click="next()"> 
+			<a class="next" href="#" ng-click="slideShowNext()"> 
 				&gt;
 			</a>
 		</div>
-	</div>
 </div>

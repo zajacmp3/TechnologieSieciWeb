@@ -76,7 +76,7 @@ angular
 	            callback.apply(socket, args);
 	          }
 	        });
-	      })
+	      });
 	    }
 	  };
   });
