@@ -2,7 +2,7 @@
 	<table>
 		<tr ng-repeat="seatrow in seats">
 			<td class="seat" ng-repeat="seat in seatrow.seats">
-				<input type="checkbox" ng-model="seats" ng-change="change(seatrow.id,seat.id)">
+				<input type="checkbox" ng-model="seat.is_reserved" ng-change="change(seatrow.id,seat.id,seat.is_reserved)" checked="false">
 			 [{{seatrow.id}}/{{seat.id}} - {{seat.is_reserved}}] 
 			</td>
 		</tr>

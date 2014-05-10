@@ -5,6 +5,8 @@ var express = require('express'),
 	model = require('./model');
 
 var app = express();
+var myAgent = new http.Agent();
+myAgent.maxSockets = 100;
 
 app.set('port', process.env.PORT || 9000);
 app.use(express.favicon());
@@ -53,6 +55,32 @@ server.listen(app.get('port'), function(){
 	console.log('Express server listening on port ' + app.get('port'));
 });
 
+var domainURI = "http://localhost:" + app.get('port');
+
 io.sockets.on('connection', function (socket) {
-    console.log('io.socket connection');
+	
+	function updateReservation(){
+		socket.emit('reservationChange', {});
+	    socket.broadcast.emit('reservationChange', {});
+	}
+	
+    socket.on('reserve', function(data) {
+    	if(data.is_reserved) {
+    		console.log("DUPA");
+	    	http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId, agent: myAgent} , function(res) {
+	    		  console.log("Got response: " + res.statusCode);
+	    		  updateReservation();
+	    		}).on('error', function(e) {
+	    		  console.log("Got error: " + e.message);
+			});
+    	} else {
+    		console.log("EDUPA");
+    		http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId, agent: myAgent} , function(res) {
+	    		  console.log("Got response: " + res.statusCode);
+	    		  updateReservation();
+	    		}).on('error', function(e) {
+	    		  console.log("Got error: " + e.message);
+			});
+    	}
+    });
 });
