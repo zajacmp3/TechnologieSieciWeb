@@ -32,3 +32,4 @@ CREATE TABLE `tsw`.`reservation` (
 )
 ENGINE = InnoDB;
 
+ALTER TABLE `reservation` ADD COLUMN `status` SMALLINT  NOT NULL DEFAULT 0 AFTER `name`;
