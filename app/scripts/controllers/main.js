@@ -1,7 +1,7 @@
 'use strict';
 var currentIndex = 0;
 
-var app = angular.module('tswApp').controller('MainCtrl', ['$scope', 'Pagination', '$http', '$location', '$routeParams', function($scope, Pagination, $http, $location,$routeParams) {
+var app = angular.module('tswApp').controller('MainCtrl', ['$scope', 'Pagination', '$http', '$location', '$routeParams', function($scope, Pagination, $http, $location, $routeParams) {
 	$scope.pagination = Pagination.getNew();
 	$scope.images = [{'name' : 'First Image', 'url' : 'http://i.telegraph.co.uk/multimedia/archive/01887/rabbit_1887903b.jpg'},
 	                 {'name' : 'Second Image', 'url' : 'http://designshack.net/wp-content/uploads/mouseinout-5.jpg'},

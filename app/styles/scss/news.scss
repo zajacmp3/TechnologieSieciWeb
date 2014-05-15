@@ -13,6 +13,21 @@
 					width: 100%;
 				}
 			}
+			> .media-body {
+				padding: 0 10px;
+				> .media-heading {
+					background-color: #68B7DE;
+				    border-color: #E7E7E7;
+				    border-radius: 4px;
+				    padding: 20px;
+				}
+				
+			}
 		}
+	}
+	> .pagination {
+		display: block;
+	    margin: 0 auto;
+	    width: 150px;
 	}
 }
