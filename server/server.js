@@ -60,27 +60,38 @@ var domainURI = "http://localhost:" + app.get('port');
 io.sockets.on('connection', function (socket) {
 	
 	function updateReservation(){
-		socket.emit('reservationChange', {});
-	    socket.broadcast.emit('reservationChange', {});
+	    io.sockets.emit('reservationChange', {});
 	}
 	
     socket.on('reserve', function(data) {
-    	if(data.is_reserved) {
-    		console.log("DUPA");
-	    	http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId, agent: myAgent} , function(res) {
-	    		  console.log("Got response: " + res.statusCode);
-	    		  updateReservation();
-	    		}).on('error', function(e) {
-	    		  console.log("Got error: " + e.message);
-			});
+    	console.log('reserve');
+    	for(var i = 0; i<data.length; i++) {
+    		http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data[i].serviceId+"&row="+data[i].rowId+"&seat="+data[i].seatId, agent: myAgent});
+        	http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data[i].serviceId+"&row="+data[i].rowId+"&seat="+data[i].seatId+"&status=2", agent: myAgent} , function(res) {
+    		  console.log("Got response: " + res.statusCode);
+    		  updateReservation();
+    		}).on('error', function(e) {
+    		  console.log("Got error: " + e.message);
+    		});
+    	}
+    });
+    socket.on('prereserve', function(data) {
+    	console.log('prereserve');
+    	console.log(data.is_prereserved);
+    	if(data.is_prereserved) {
+	    	http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId+"&status=1", agent: myAgent} , function(res) {
+    		  console.log("Got response: " + res.statusCode);
+    		  updateReservation();
+    		}).on('error', function(e) {
+    		  console.log("Got error: " + e.message);
+	    	});
     	} else {
-    		console.log("EDUPA");
     		http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId, agent: myAgent} , function(res) {
-	    		  console.log("Got response: " + res.statusCode);
-	    		  updateReservation();
-	    		}).on('error', function(e) {
-	    		  console.log("Got error: " + e.message);
-			});
+      		  console.log("Got response: " + res.statusCode);
+    		  updateReservation();
+    		}).on('error', function(e) {
+    		  console.log("Got error: " + e.message);
+    		});
     	}
     });
 });

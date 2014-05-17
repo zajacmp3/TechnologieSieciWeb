@@ -16,6 +16,9 @@
 			> .reserved {
 				background-color: red;
 			}
+			> .reserved.prereserved, .prereserved {
+				background-color: yellow !important;
+			}
 		}
 	}
 }

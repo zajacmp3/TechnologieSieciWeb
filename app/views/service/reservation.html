@@ -2,11 +2,22 @@
 	<div class="table">
 		<div ng-repeat="seatrow in seats" class="seatrow">
 			Rząd {{seatrow.id}}
-			<div class="seat" ng-repeat="seat in seatrow.seats" ng-class="{'reserved': seat.is_reserved == true}">
-				<input type="checkbox" ng-model="seat.is_reserved" ng-change="change(seatrow.id,seat.id,seat.is_reserved)" checked="false">
+			<div class="seat" ng-repeat="seat in seatrow.seats" ng-class="{'reserved': seat.is_reserved == true, 'prereserved': seat.status == 1}">
+				<div ng-if="seat.is_reserved != true && seat.status == 0">
+					<input type="checkbox" ng-model="seat.is_reserved" ng-change="change(seatrow.id,seat.id,seat.is_reserved)" checked="false">
+				</div>
 			 <div class="seat-info">[{{seat.id}}]</div>
 			 
 			</div>
 		</div>
 	</div>
+	<div class="prereserved table">
+		Wybierz miejsca i rezerwuj
+		<div ng-repeat="prereservedSeat in prereservedSeats">
+			Rząd: {{prereservedSeat.rowId}} Miejsce: {{prereservedSeat.seatId}}
+			Rezerwacja na imię: <input type="text" ng-model="prereservedSeat.name"></input> 
+			<input type="button" class="btn" ng-click="change(prereservedSeat.rowId, prereservedSeat.seatId, false)">Usuń</input>
+		</div>
+		<div class="btn" ng-click="reserve()">Rezerwuj</div>
+	</div> 
 </div>
