@@ -2,7 +2,8 @@ var express = require('express'),
 	http = require('http'),
 	path = require('path'),
 	routes = require('./routes'),
-	model = require('./model');
+	model = require('./model'),
+	email = require('./email');
 
 var app = express();
 var myAgent = new http.Agent();
@@ -24,6 +25,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/test', routes.index);
+app.get('/confirm/:confirmId', email.confirm);
 
 //CRUD news
 //http://127.0.0.1:9000/server/newsSelect
@@ -64,16 +66,24 @@ io.sockets.on('connection', function (socket) {
 	}
 	
     socket.on('reserve', function(data) {
-    	console.log('reserve');
-    	for(var i = 0; i<data.length; i++) {
-    		http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data[i].serviceId+"&row="+data[i].rowId+"&seat="+data[i].seatId, agent: myAgent});
-        	http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data[i].serviceId+"&row="+data[i].rowId+"&seat="+data[i].seatId+"&status=2", agent: myAgent} , function(res) {
+    	if(data.length < 2)
+    		return;
+    	
+    	var emailAddress = data.email;
+    	//Generating random string used to confirm reservation by email
+    	var confirmId = Math.random().toString(36).substr(10);
+    	
+    	for(var i = 0; i<data.data.length; i++) {
+    		http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data.data[i].serviceId+"&row="+data.data[i].rowId+"&seat="+data.data[i].seatId, agent: myAgent});
+        	http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data.data[i].serviceId+"&row="+data.data[i].rowId+"&seat="+data.data[i].seatId+"&status=2&confirmId="+confirmId, agent: myAgent} , function(res) {
     		  console.log("Got response: " + res.statusCode);
     		  updateReservation();
     		}).on('error', function(e) {
     		  console.log("Got error: " + e.message);
     		});
     	}
+		//Sending email confirmation
+		email.sendEmail(emailAddress, confirmId);
     });
     socket.on('prereserve', function(data) {
     	console.log('prereserve');

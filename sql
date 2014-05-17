@@ -22,7 +22,7 @@ CREATE TABLE `services` (
 )
 ENGINE = InnoDB;
 
-CREATE TABLE `tsw`.`reservation` (
+CREATE TABLE `reservation` (
   `id` INTEGER  NOT NULL AUTO_INCREMENT,
   `service_id` INTEGER  NOT NULL,
   `row` INTEGER  NOT NULL,
@@ -33,3 +33,6 @@ CREATE TABLE `tsw`.`reservation` (
 ENGINE = InnoDB;
 
 ALTER TABLE `reservation` ADD COLUMN `status` SMALLINT  NOT NULL DEFAULT 0 AFTER `name`;
+
+ALTER TABLE `reservation` ADD COLUMN `confirmId` VARCHAR(128) AFTER `status`;
+

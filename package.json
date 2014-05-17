@@ -2,7 +2,8 @@
   "name": "tsw",
   "version": "0.0.0",
   "dependencies": {
-    "socket.io": "~0.9.16"
+    "socket.io": "~0.9.16",
+    "nodemailer": "~0.6.5"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

@@ -8,6 +8,8 @@ angular.module('tswApp').controller('ServiceCtrl', ['$scope', '$http', function(
 
 angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$routeParams', '$http', 'socket', function($scope, $routeParams, $http, socket) {
 	$scope.id = $routeParams.id;
+	$scope.email = "";
+	$scope.error = "";
 	$http.get("/server/serviceSelect").success(function(data){
 		$scope.services = data.rows;
 	});
@@ -85,13 +87,15 @@ angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$routeParams'
 	});
 	
 	$scope.change = function(rowId, seatId, is_reserverd) {
+		console.log(is_reserverd);
 		socket.emit(
 			'prereserve',
 			{
 				rowId : rowId,
 				seatId : seatId,
 				serviceId : $scope.id,
-				is_prereserved : is_reserverd
+				is_prereserved : is_reserverd,
+				email : $scope.email
 			},
 			function(result) {
 				if (!result) {
@@ -105,7 +109,11 @@ angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$routeParams'
 		}
 	};
 	$scope.reserve = function() {
-		socket.emit('reserve', $scope.prereservedSeats, function(result) {
+		if($scope.email.length == 0 || $scope.email.indexOf("@") == -1) {
+			$scope.error = "Proszę wprowadzić poprawny adres email!";
+			return;
+		}
+		socket.emit('reserve', {email: $scope.email, data: $scope.prereservedSeats}, function(result) {
 			if (!result) {
 				alert('There was an error making reservation');
 				return;
@@ -114,7 +122,6 @@ angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$routeParams'
 		$scope.prereservedSeats = [];
 	};
 	socket.on('reservationChange', function (data) {
-		console.log("CHANGE!");
 		$http.get("/server/reservationSelect?"+condition).success(function(data){
 			$scope.reserved = data.rows;
 			$scope.updateReservation($scope.reserved);
@@ -128,7 +135,7 @@ angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$routeParams'
 				$scope.seats[i].seats[j].is_reserved = false;				
 			}
 		}
-	}
+	};
 	
 	$scope.updateReservation = function(reserved) {
 		$scope.seats = $scope.defaultSeats;

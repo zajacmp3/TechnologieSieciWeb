@@ -18,6 +18,8 @@
 			Rezerwacja na imię: <input type="text" ng-model="prereservedSeat.name"></input> 
 			<input type="button" class="btn" ng-click="change(prereservedSeat.rowId, prereservedSeat.seatId, false)">Usuń</input>
 		</div>
+		<div class="error">{{error}}</div>
+		<input type="text" ng-model="email" placeholder="adres e-mail"></input>
 		<div class="btn" ng-click="reserve()">Rezerwuj</div>
 	</div> 
 </div>
