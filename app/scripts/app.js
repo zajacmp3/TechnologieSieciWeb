@@ -59,8 +59,6 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-    $locationProvider
-    .html5Mode(true);
   }).factory('socket', function ($rootScope) {
 	  var socket = io.connect('http://localhost:9000');
 	  return {
