@@ -79,6 +79,7 @@ exports.serviceUpdate = function(req, res) {
 
 //Reservation
 exports.reservationSelect = function(req, res) {
+	console.log(req.query);
 	var connection = configureDb();
 	connection.query(config.jsonToQuery('select', 'reservation', req.query), function(err, rows){
 	    res.send({ err : err, rows: rows });
@@ -106,6 +107,27 @@ exports.reservationUpdate = function(req, res) {
 	var connection = configureDb();
 	connection.query(config.jsonToQuery('update', 'reservation', req.query), function(err, rows){
 	    res.send({ err : err, rows: rows });
+	});
+	connection.end();
+};
+
+exports.check_auth_user = function (username,password,done,public_id){
+	var connection = configureDb();
+	connection.query(config.jsonToQuery('select', 'users', {username: username, password: password}), function(err, rows){
+        if(rows.length > 0){
+            //serialize the query result save whole data as session in req.user[] array  
+            passport.serializeUser(function(res, done) {
+                done(null,res);
+            });
+            passport.deserializeUser(function(id, done) {
+                done(null,res);
+            });
+            //console.log(JSON.stringify(results));
+            //console.log(results[0]['member_id']);
+            return done(null, res);
+        }else{
+            return done(null, false); 
+        }
 	});
 	connection.end();
 };

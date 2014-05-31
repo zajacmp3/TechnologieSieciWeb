@@ -36,3 +36,11 @@ ALTER TABLE `reservation` ADD COLUMN `status` SMALLINT  NOT NULL DEFAULT 0 AFTER
 
 ALTER TABLE `reservation` ADD COLUMN `confirmId` VARCHAR(128) AFTER `status`;
 
+CREATE TABLE `users` (
+  `id` INTEGER  NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(64)  NOT NULL,
+  `password` VARCHAR(255)  NOT NULL,
+  `email` VARCHAR(64)  NOT NULL,
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;

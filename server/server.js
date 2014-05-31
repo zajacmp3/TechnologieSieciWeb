@@ -1,6 +1,8 @@
 var express = require('express'),
 	http = require('http'),
 	path = require('path'),
+	passport = require('passport'),
+	LocalStrategy = require('passport-local').Strategy,
 	routes = require('./routes'),
 	model = require('./model'),
 	email = require('./email');
@@ -16,8 +18,17 @@ app.use(express.bodyParser());
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 app.use(express.methodOverride());
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, '..', 'app')));
+
+passport.use(new LocalStrategy(
+    function(username, password, done) {
+    	console.log(username);console.log(password);
+        return model.check_auth_user(username,password,done);
+    }
+));
 
 // development only
 if ('development' == app.get('env')) {
@@ -49,6 +60,14 @@ app.get('/server/reservationInsert', model.reservationInsert);
 app.get('/server/reservationDelete', model.reservationDelete);
 app.get('/server/reservationUpdate', model.reservationUpdate);
 
+//Admin Panel
+app.post('/login',
+    passport.authenticate('local', {
+        successRedirect: '/admin',
+        failureRedirect: '/#/admin'
+    })
+);
+
 var server = http.createServer(app);
 
 var io = require('socket.io').listen(server);
@@ -63,7 +82,7 @@ io.sockets.on('connection', function (socket) {
 	
 	var preReservedSeats = [];
 	
-	function updateReservation(){
+	function updateReservation() {
 	    io.sockets.emit('reservationChange', {});
 	}
 	
@@ -115,6 +134,5 @@ io.sockets.on('connection', function (socket) {
 			preReserveChange({rowId: preReservedSeats[record].rowId, seatId: preReservedSeats[record].seatId, serviceId: preReservedSeats[record].serviceId, is_prereserved: false});
 		}
 		preReservedSeats = [];
-		updateReservation();
 	});
 });

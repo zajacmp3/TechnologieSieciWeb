@@ -56,6 +56,10 @@ angular
           templateUrl: 'views/static/patron.html',
           controller: 'StaticCtrl'
       })
+      .when('/admin', {
+          templateUrl: 'views/login/login.html',
+          controller: 'LoginCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
