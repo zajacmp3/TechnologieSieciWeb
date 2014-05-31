@@ -12,10 +12,14 @@
     "angular-sanitize": "1.2.15",
     "angular-route": "1.2.15",
     "angular-socket-io": "0.6.0",
-    "ng-simplePagination": "1.0.2"
+    "angular-animate": "~1.2.16",
+    "ng-simplePagination": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",
     "angular-scenario": "1.2.15"
+  },
+  "resolutions": {
+    "angular": "1.2.16"
   }
 }
