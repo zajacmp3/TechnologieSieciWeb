@@ -61,11 +61,33 @@ var domainURI = "http://localhost:" + app.get('port');
 
 io.sockets.on('connection', function (socket) {
 	
+	var preReservedSeats = [];
+	
 	function updateReservation(){
 	    io.sockets.emit('reservationChange', {});
 	}
 	
+	function preReserveChange(data) {
+    	preReservedSeats.push(data);
+    	if(data.is_prereserved) {
+	    	http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId+"&status=1", agent: myAgent} , function(res) {
+    		  console.log("Got response: " + res.statusCode);
+    		  updateReservation();
+    		}).on('error', function(e) {
+    		  console.log("Got error: " + e.message);
+	    	});
+    	} else {
+    		http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId, agent: myAgent} , function(res) {
+      		  console.log("Got response: " + res.statusCode);
+    		  updateReservation();
+    		}).on('error', function(e) {
+    		  console.log("Got error: " + e.message);
+    		});
+    	}
+    };
+	
     socket.on('reserve', function(data) {
+    	preReservedSeats = [];
     	if(data.length < 2)
     		return;
     	
@@ -85,23 +107,14 @@ io.sockets.on('connection', function (socket) {
 		//Sending email confirmation
 		email.sendEmail(emailAddress, confirmId);
     });
-    socket.on('prereserve', function(data) {
-    	console.log('prereserve');
-    	console.log(data.is_prereserved);
-    	if(data.is_prereserved) {
-	    	http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId+"&status=1", agent: myAgent} , function(res) {
-    		  console.log("Got response: " + res.statusCode);
-    		  updateReservation();
-    		}).on('error', function(e) {
-    		  console.log("Got error: " + e.message);
-	    	});
-    	} else {
-    		http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId, agent: myAgent} , function(res) {
-      		  console.log("Got response: " + res.statusCode);
-    		  updateReservation();
-    		}).on('error', function(e) {
-    		  console.log("Got error: " + e.message);
-    		});
-    	}
-    });
+    socket.on('prereserve', preReserveChange);
+    
+    //If client disconnects with pre reserved seats server will remove them.
+	socket.on('disconnect', function() {
+		for(var record in preReservedSeats) {
+			preReserveChange({rowId: preReservedSeats[record].rowId, seatId: preReservedSeats[record].seatId, serviceId: preReservedSeats[record].serviceId, is_prereserved: false});
+		}
+		preReservedSeats = [];
+		updateReservation();
+	});
 });

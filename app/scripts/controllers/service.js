@@ -141,6 +141,7 @@ angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$routeParams'
 		$scope.seats = $scope.defaultSeats;
 		$scope.resetSeats();
 		//TODO: replace above with 'reset' that iterates on all records. slow but without errors and much effort
+		//TODO: Bug with set class has been fixed. Now it is time to do that effiecient way!
 		for(var record in reserved) {
 			$scope.seats[reserved[record].row -1].seats[reserved[record].seat -1].status = reserved[record].status;
 			if(reserved[record].status == 2) {
