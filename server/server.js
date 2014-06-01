@@ -46,9 +46,7 @@ app.get('/confirm/:confirmId', email.confirm);
 //http://127.0.0.1:9000/server/newsSelect
 app.get('/server/newsSelect', model.newsSelect);
 //http://127.0.0.1:9000/server/newsInsert?title=test&content=testcontent&author=testauthor&created=2014-05-10%2015:21:21&modified=2014-05-10%2015:21:21
-app.get('/server/newsInsert', model.newsInsert);
 //http://127.0.0.1:9000/server/newsDelete?title=test&content=testcontent&author=testauthor&created=2014-05-10%2015:21:21&modified=2014-05-10%2015:21:21
-app.get('/server/newsDelete', model.newsDelete);
 //http://127.0.0.1:9000/server/newsUpdate?title=test&content=testcontent&author=testauthor&created=2014-05-10%2015:21:21&modified=2014-05-10%2015:21:21&set={%22author%22%20:%20%22dupa%22}
 
 //CRUD services
@@ -86,6 +84,12 @@ app.post('/admin/newsEdit', ensureAuthenticated, function(req, res){
 app.get('/admin/newsRemove/:id', ensureAuthenticated, function(req, res){
 	req.query = {id: req.params.id};
 	model.newsDelete(req, res);
+	res.redirect('/admin');
+});
+//Add news
+app.post('/admin/newsAdd', ensureAuthenticated, function(req, res){
+	req.query = req.body;
+	model.newsInsert(req, res);
 	res.redirect('/admin');
 });
 
