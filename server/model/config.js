@@ -15,10 +15,12 @@ exports.jsonToQuery = function(action, model, req) {
 			queryValues.push(req[key]);
 		} else {
 			var obj = req[key];
-			console.log(obj);
-			obj = JSON.parse(obj);
-			set = obj;
-			console.log(set);
+			if (typeof obj == 'object') {
+				set = obj
+			} else {
+				obj = JSON.parse(obj);
+				set = obj;				
+			}
 		}
     }
 	

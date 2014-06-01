@@ -49,8 +49,6 @@ app.get('/server/newsSelect', model.newsSelect);
 app.get('/server/newsInsert', model.newsInsert);
 //http://127.0.0.1:9000/server/newsDelete?title=test&content=testcontent&author=testauthor&created=2014-05-10%2015:21:21&modified=2014-05-10%2015:21:21
 app.get('/server/newsDelete', model.newsDelete);
-//http://127.0.0.1:9000/server/newsUpdate?title=test&content=testcontent&author=testauthor&created=2014-05-10%2015:21:21&modified=2014-05-10%2015:21:21&set={%22author%22%20:%20%22dupa%22}
-app.get('/server/newsUpdate', model.newsUpdate);
 
 //CRUD services
 app.get('/server/serviceSelect', model.serviceSelect);
@@ -73,6 +71,15 @@ app.post('/login',
 );
 app.get('/admin', ensureAuthenticated, function(req, res){
 	res.render('admin/index.html');
+});
+//Update news
+app.post('/admin/newsEdit', ensureAuthenticated, function(req, res){
+	var params = req.body;
+	req.query = {id: params.id, set : params};
+	
+	//http://127.0.0.1:9000/server/newsUpdate?title=test&content=testcontent&author=testauthor&created=2014-05-10%2015:21:21&modified=2014-05-10%2015:21:21&set={%22author%22%20:%20%22dupa%22}
+	model.newsUpdate(req, res);
+	res.redirect('/admin');
 });
 
 var server = http.createServer(app);

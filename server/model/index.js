@@ -13,6 +13,7 @@ function configureDb() {
 }
 
 exports.newsSelect = function(req, res) {
+	console.log(req.query);
 	var connection = configureDb();
 	connection.query(config.jsonToQuery('select', 'articles', req.query), function(err, rows){
 	    res.send({ err : err, rows: rows });
