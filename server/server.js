@@ -18,15 +18,19 @@ app.use(express.bodyParser());
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 app.use(express.methodOverride());
+app.use(express.cookieParser());
+app.use(express.session({ secret: 'keyboard cat' }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, '..', 'app')));
+//Express viewing engine configure
+app.set('views', path.join(__dirname, '..', 'app'));
+app.engine('html', require('ejs').renderFile);
 
 passport.use(new LocalStrategy(
     function(username, password, done) {
-    	console.log(username);console.log(password);
-        return model.check_auth_user(username,password,done);
+        return model.check_auth_user(username,password,done,passport);
     }
 ));
 
@@ -67,6 +71,9 @@ app.post('/login',
         failureRedirect: '/#/admin'
     })
 );
+app.get('/admin', ensureAuthenticated, function(req, res){
+	res.render('404.html');
+});
 
 var server = http.createServer(app);
 
@@ -136,3 +143,10 @@ io.sockets.on('connection', function (socket) {
 		preReservedSeats = [];
 	});
 });
+
+function ensureAuthenticated(req, res, next) {
+	if (req.isAuthenticated()) {
+		return next();
+	}
+	res.redirect('/#/admin');
+}

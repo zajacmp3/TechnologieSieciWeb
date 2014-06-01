@@ -111,11 +111,12 @@ exports.reservationUpdate = function(req, res) {
 	connection.end();
 };
 
-exports.check_auth_user = function (username,password,done,public_id){
+exports.check_auth_user = function (username,password,done,passport,public_id){
 	var connection = configureDb();
 	connection.query(config.jsonToQuery('select', 'users', {username: username, password: password}), function(err, rows){
         if(rows.length > 0){
             //serialize the query result save whole data as session in req.user[] array  
+        	var res=rows[0]; 
             passport.serializeUser(function(res, done) {
                 done(null,res);
             });
