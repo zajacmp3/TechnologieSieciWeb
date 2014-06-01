@@ -25,7 +25,7 @@ app.use(passport.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, '..', 'app')));
 //Express viewing engine configure
-app.set('views', path.join(__dirname, '..', 'app'));
+app.set('views', path.join(__dirname, '..', 'app/views'));
 app.engine('html', require('ejs').renderFile);
 
 passport.use(new LocalStrategy(
@@ -72,7 +72,7 @@ app.post('/login',
     })
 );
 app.get('/admin', ensureAuthenticated, function(req, res){
-	res.render('404.html');
+	res.render('admin/index.html');
 });
 
 var server = http.createServer(app);

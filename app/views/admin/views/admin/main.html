@@ -1,0 +1,26 @@
+<div class="news margin-b-20">
+	<div class="news-position margin-b-20" ng-repeat="article in articles | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage">
+		<div class="media">
+			<a ng-if="article.image" class="pull-left" href="#"> 
+				<img class="media-object" src="{{article.image.src}}" alt="{{article.image.title}}">
+			</a> 
+			<div class="media-body">
+				<h4 class="media-heading">{{article.title}}</h4>
+				{{article.content}}
+			</div>
+			<div class="pull-right">
+				<span class="author">{{article.author}}</span>
+				&nbsp;
+				<span class="created">{{article.created}}</span>
+			</div>
+			<div class="pull-right">
+				<a href="#edit/{{article.id}}">Edytuj</a>
+				<a href="/admin/newsRemove/{{article.id}}">Usuń</a>
+			</div>
+		</div>
+	</div>
+	<div class="pagination">
+		<button class="btn" ng-click="pagination.prevPage()">Previous</button>
+		<button class="btn" ng-click="pagination.nextPage()">Next</button>
+	</div>
+</div>
