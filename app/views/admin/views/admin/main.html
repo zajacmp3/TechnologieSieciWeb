@@ -1,5 +1,5 @@
 <div class="news margin-b-20">
-	<div class="news-position margin-b-20" ng-repeat="article in articles | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage">
+	<div class="news-position margin-b-20" ng-repeat="article in articles | orderBy:'created':true | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage">
 		<div class="media">
 			<a ng-if="article.image" class="pull-left" href="#"> 
 				<img class="media-object" src="{{article.image.src}}" alt="{{article.image.title}}">

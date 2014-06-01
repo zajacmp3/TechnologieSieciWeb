@@ -74,6 +74,8 @@ app.get('/admin', ensureAuthenticated, function(req, res){
 //Update news
 app.post('/admin/newsEdit', ensureAuthenticated, function(req, res){
 	var params = req.body;
+	var now = new Date();
+	params.modified = now.getFullYear() + ":" + now.getMonth() + ":" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 	var id = params.id;
 	delete params.id;
 	req.query = {id: id, set : params};
@@ -89,6 +91,8 @@ app.get('/admin/newsRemove/:id', ensureAuthenticated, function(req, res){
 //Add news
 app.post('/admin/newsAdd', ensureAuthenticated, function(req, res){
 	req.query = req.body;
+	var now = new Date();
+	req.query.modified = now.getFullYear() + ":" + now.getMonth() + ":" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 	model.newsInsert(req, res);
 	res.redirect('/admin');
 });
