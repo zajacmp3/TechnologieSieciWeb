@@ -51,9 +51,6 @@ app.get('/server/newsSelect', model.newsSelect);
 
 //CRUD services
 app.get('/server/serviceSelect', model.serviceSelect);
-app.get('/server/serviceInsert', model.serviceInsert);
-app.get('/server/serviceDelete', model.serviceDelete);
-app.get('/server/serviceUpdate', model.serviceUpdate);
 
 //CRUD reservation
 app.get('/server/reservationSelect', model.reservationSelect);
@@ -94,6 +91,34 @@ app.post('/admin/newsAdd', ensureAuthenticated, function(req, res){
 	var now = new Date();
 	req.query.modified = now.getFullYear() + ":" + now.getMonth() + ":" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 	model.newsInsert(req, res);
+	res.redirect('/admin');
+});
+
+//Services Managment
+
+//Update service
+app.post('/admin/serviceEdit', ensureAuthenticated, function(req, res){
+	var params = req.body;
+	var now = new Date();
+	params.modified = now.getFullYear() + ":" + now.getMonth() + ":" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+	var id = params.id;
+	delete params.id;
+	req.query = {id: id, set : params};
+	model.serviceUpdate(req, res);
+	res.redirect('/admin');
+});
+//Remove news
+app.get('/admin/serviceRemove/:id', ensureAuthenticated, function(req, res){
+	req.query = {id: req.params.id};
+	model.serviceDelete(req, res);
+	res.redirect('/admin');
+});
+//Add news
+app.post('/admin/serviceAdd', ensureAuthenticated, function(req, res){
+	req.query = req.body;
+	var now = new Date();
+	req.query.modified = now.getFullYear() + ":" + now.getMonth() + ":" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+	model.serviceInsert(req, res);
 	res.redirect('/admin');
 });
 
