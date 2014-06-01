@@ -69,7 +69,7 @@ exports.jsonToQuery = function(action, model, req) {
 				queryCondition.push("'" + querySetValues[i] + "'");
 				querySetConditions.push(queryCondition.join(' = '));
 			}
-			query = "UPDATE " + model + " SET " + querySetConditions.join(andSeparator) + " WHERE " + queryConditions.join(andSeparator);
+			query = "UPDATE " + model + " SET " + querySetConditions.join(', ') + " WHERE " + queryConditions.join(andSeparator);
 			console.log(query);
 			return query;
 		case 'delete':
