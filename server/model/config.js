@@ -16,7 +16,7 @@ exports.jsonToQuery = function(action, model, req) {
 		} else {
 			var obj = req[key];
 			if (typeof obj == 'object') {
-				set = obj
+				set = obj;
 			} else {
 				obj = JSON.parse(obj);
 				set = obj;				
@@ -30,8 +30,8 @@ exports.jsonToQuery = function(action, model, req) {
 			for(var i = 0; i<queryValues.length; i++) {
 				queryInsertValues.push("'" + queryValues[i] + "'");
 			}
-			query = "INSERT INTO " + model + " (" + queryKeys.join(',')
-				+ ") VALUES (" + queryInsertValues.join(',') + ")";
+			query = "INSERT INTO " + model + " (" + queryKeys.join(',') +
+				") VALUES (" + queryInsertValues.join(',') + ")";
 			console.log(query);
 			return query;
 		case 'select':
@@ -44,7 +44,7 @@ exports.jsonToQuery = function(action, model, req) {
 			}
 			query = "SELECT * FROM " + model;
 			if(queryConditions.length > 0) {
-				 query = query + " WHERE " + queryConditions.join(andSeparator);
+				query = query + " WHERE " + queryConditions.join(andSeparator);
 			}
 			console.log(query);
 			return query;
@@ -54,7 +54,7 @@ exports.jsonToQuery = function(action, model, req) {
 			for(var key in set){
 				querySetKeys.push(key);
 				querySetValues.push(set[key]);
-		    }
+			}
 			var queryConditions = [];
 			for(var i = 0; i < queryKeys.length; i++) {
 				queryCondition = [];

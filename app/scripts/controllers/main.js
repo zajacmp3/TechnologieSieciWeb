@@ -5,16 +5,16 @@ var app = angular.module('tswApp').controller('MainCtrl', ['$scope', 'Pagination
 	$scope.search = $routeParams.string;
 	$scope.pagination = Pagination.getNew();
 	$scope.images = [{'name' : 'First Image', 'url' : 'http://i.telegraph.co.uk/multimedia/archive/01887/rabbit_1887903b.jpg'},
-	                 {'name' : 'Second Image', 'url' : 'http://designshack.net/wp-content/uploads/mouseinout-5.jpg'},
-	                 {'name' : 'Second Image', 'url' : 'http://i.telegraph.co.uk/multimedia/archive/01887/rabbit_1887903b.jpg'},
-	                 {'name' : 'Second Image', 'url' : 'http://designshack.net/wp-content/uploads/mouseinout-5.jpg'},
-	                ];
+    {'name' : 'Second Image', 'url' : 'http://designshack.net/wp-content/uploads/mouseinout-5.jpg'},
+    {'name' : 'Second Image', 'url' : 'http://i.telegraph.co.uk/multimedia/archive/01887/rabbit_1887903b.jpg'},
+    {'name' : 'Second Image', 'url' : 'http://designshack.net/wp-content/uploads/mouseinout-5.jpg'},
+  ];
 	$http.get("/server/serviceSelect").success(function(data){
 		$scope.services = data.rows;
 	});
 	$scope.articles = [];
 	var condition = "";
-	if($scope.search != null) {
+	if($scope.search !== null) {
 		condition = "?title="+$scope.search;
 	}
 	$http.get("/server/newsSelect" + condition).success(function(data){
@@ -48,7 +48,7 @@ app.directive('slideShow', function($timeout) {
 			//https://github.com/angular/angular.js/issues/1306
 			$timeout(function(){
 				$('.cycle-slideshow').cycle();
-		    },0);
+			},0);
 		}
 	};
 });

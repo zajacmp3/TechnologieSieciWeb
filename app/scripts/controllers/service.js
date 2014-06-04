@@ -14,57 +14,57 @@ angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$routeParams'
 		$scope.services = data.rows;
 	});
 	$scope.defaultSeats = [{'id' : '1', 'seats' : [
-	                                        {'id' : '1', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '2', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '3', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '4', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '5', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '6', 'is_reserved' : false, 'status' : 0},
-	                                        ]}, 
-                    {'id' : '2', 'seats' : [
-	                                        {'id' : '1', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '2', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '3', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '4', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '5', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '6', 'is_reserved' : false, 'status' : 0},
-	                                        ]},
-                    {'id' : '3', 'seats' : [
-	                                        {'id' : '1', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '2', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '3', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '4', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '5', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '6', 'is_reserved' : false, 'status' : 0},
-	                                        ]},
-                    {'id' : '4', 'seats' : [
-	                                        {'id' : '1', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '2', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '3', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '4', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '5', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '6', 'is_reserved' : false, 'status' : 0},
-	                                        ]},
-                    {'id' : '5', 'seats' : [
-	                                        {'id' : '1', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '2', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '3', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '4', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '5', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '6', 'is_reserved' : false, 'status' : 0},
-	                                        ]},
-                    {'id' : '6', 'seats' : [
-	                                        {'id' : '1', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '2', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '3', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '4', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '5', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '6', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '7', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '8', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '9', 'is_reserved' : false, 'status' : 0},
-	                                        {'id' : '10', 'is_reserved' : false, 'status' : 0},
-	                                        ]},
+    {'id' : '1', 'is_reserved' : false, 'status' : 0},
+    {'id' : '2', 'is_reserved' : false, 'status' : 0},
+    {'id' : '3', 'is_reserved' : false, 'status' : 0},
+    {'id' : '4', 'is_reserved' : false, 'status' : 0},
+    {'id' : '5', 'is_reserved' : false, 'status' : 0},
+    {'id' : '6', 'is_reserved' : false, 'status' : 0},
+  ]}, 
+  {'id' : '2', 'seats' : [
+    {'id' : '1', 'is_reserved' : false, 'status' : 0},
+    {'id' : '2', 'is_reserved' : false, 'status' : 0},
+    {'id' : '3', 'is_reserved' : false, 'status' : 0},
+    {'id' : '4', 'is_reserved' : false, 'status' : 0},
+    {'id' : '5', 'is_reserved' : false, 'status' : 0},
+    {'id' : '6', 'is_reserved' : false, 'status' : 0},
+  ]},
+  {'id' : '3', 'seats' : [
+    {'id' : '1', 'is_reserved' : false, 'status' : 0},
+    {'id' : '2', 'is_reserved' : false, 'status' : 0},
+    {'id' : '3', 'is_reserved' : false, 'status' : 0},
+    {'id' : '4', 'is_reserved' : false, 'status' : 0},
+    {'id' : '5', 'is_reserved' : false, 'status' : 0},
+    {'id' : '6', 'is_reserved' : false, 'status' : 0},
+  ]},
+  {'id' : '4', 'seats' : [
+    {'id' : '1', 'is_reserved' : false, 'status' : 0},
+    {'id' : '2', 'is_reserved' : false, 'status' : 0},
+    {'id' : '3', 'is_reserved' : false, 'status' : 0},
+    {'id' : '4', 'is_reserved' : false, 'status' : 0},
+    {'id' : '5', 'is_reserved' : false, 'status' : 0},
+    {'id' : '6', 'is_reserved' : false, 'status' : 0},
+  ]},
+  {'id' : '5', 'seats' : [
+    {'id' : '1', 'is_reserved' : false, 'status' : 0},
+    {'id' : '2', 'is_reserved' : false, 'status' : 0},
+    {'id' : '3', 'is_reserved' : false, 'status' : 0},
+    {'id' : '4', 'is_reserved' : false, 'status' : 0},
+    {'id' : '5', 'is_reserved' : false, 'status' : 0},
+    {'id' : '6', 'is_reserved' : false, 'status' : 0},
+  ]},
+  {'id' : '6', 'seats' : [
+    {'id' : '1', 'is_reserved' : false, 'status' : 0},
+    {'id' : '2', 'is_reserved' : false, 'status' : 0},
+    {'id' : '3', 'is_reserved' : false, 'status' : 0},
+    {'id' : '4', 'is_reserved' : false, 'status' : 0},
+    {'id' : '5', 'is_reserved' : false, 'status' : 0},
+    {'id' : '6', 'is_reserved' : false, 'status' : 0},
+    {'id' : '7', 'is_reserved' : false, 'status' : 0},
+    {'id' : '8', 'is_reserved' : false, 'status' : 0},
+    {'id' : '9', 'is_reserved' : false, 'status' : 0},
+    {'id' : '10', 'is_reserved' : false, 'status' : 0},
+  ]},
 					];
 	$scope.seats = $scope.defaultSeats;
 	
@@ -109,7 +109,7 @@ angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$routeParams'
 		}
 	};
 	$scope.reserve = function() {
-		if($scope.email.length == 0 || $scope.email.indexOf("@") == -1) {
+		if($scope.email.length === 0 || $scope.email.indexOf("@") == -1) {
 			$scope.error = "Proszę wprowadzić poprawny adres email!";
 			return;
 		}
@@ -147,6 +147,6 @@ angular.module('tswApp').controller('ReservationCtrl', ['$scope', '$routeParams'
 			if(reserved[record].status == 2) {
 				$scope.seats[reserved[record].row -1].seats[reserved[record].seat -1].is_reserved = true;
 			}
-		};
+		}
 	};
 }]);

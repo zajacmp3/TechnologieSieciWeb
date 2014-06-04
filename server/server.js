@@ -143,46 +143,40 @@ io.sockets.on('connection', function (socket) {
 	var preReservedSeats = [];
 	
 	function updateReservation() {
-	    io.sockets.emit('reservationChange', {});
+		io.sockets.emit('reservationChange', {});
 	}
 	
 	function preReserveChange(data) {
-    	preReservedSeats.push(data);
-    	if(data.is_prereserved) {
-	    	http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId+"&status=1", agent: myAgent} , function(res) {
-    		  console.log("Got response: " + res.statusCode);
-    		  updateReservation();
-    		}).on('error', function(e) {
-    		  console.log("Got error: " + e.message);
-	    	});
-    	} else {
-    		http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId, agent: myAgent} , function(res) {
-      		  console.log("Got response: " + res.statusCode);
-    		  updateReservation();
-    		}).on('error', function(e) {
-    		  console.log("Got error: " + e.message);
-    		});
-    	}
-    };
+    preReservedSeats.push(data);
+		if(data.is_prereserved) {
+      http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId+"&status=1", agent: myAgent} , function(res) {
+        updateReservation();
+      }).on('error', function(e) {
+        console.log("Got error: " + e.message);
+      });
+		} else {
+			http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data.serviceId+"&row="+data.rowId+"&seat="+data.seatId, agent: myAgent} , function(res) {
+        console.log("Got response: " + res.statusCode);
+        updateReservation();
+			}).on('error', function(e) {
+				console.log("Got error: " + e.message);
+			});
+		}
+	}
 	
     socket.on('reserve', function(data) {
-    	preReservedSeats = [];
-    	if(data.length < 2)
-    		return;
-    	
-    	var emailAddress = data.email;
-    	//Generating random string used to confirm reservation by email
-    	var confirmId = Math.random().toString(36).substr(10);
-    	
-    	for(var i = 0; i<data.data.length; i++) {
-    		http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data.data[i].serviceId+"&row="+data.data[i].rowId+"&seat="+data.data[i].seatId, agent: myAgent});
-        	http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data.data[i].serviceId+"&row="+data.data[i].rowId+"&seat="+data.data[i].seatId+"&status=2&confirmId="+confirmId, agent: myAgent} , function(res) {
-    		  console.log("Got response: " + res.statusCode);
-    		  updateReservation();
-    		}).on('error', function(e) {
-    		  console.log("Got error: " + e.message);
-    		});
-    	}
+			preReservedSeats = [];
+			if(data.length < 2)
+				return;
+
+			var emailAddress = data.email;
+			//Generating random string used to confirm reservation by email
+			var confirmId = Math.random().toString(36).substr(10);
+
+  for(var i = 0; i<data.data.length; i++) {
+    http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationDelete?service_id="+data.data[i].serviceId+"&row="+data.data[i].rowId+"&seat="+data.data[i].seatId, agent: myAgent});
+    http.get({hostname: 'localhost', port:app.get('port'), path: "/server/reservationInsert?service_id="+data.data[i].serviceId+"&row="+data.data[i].rowId+"&seat="+data.data[i].seatId+"&status=2&confirmId="+confirmId, agent: myAgent} , updateReservation);
+  }
 		//Sending email confirmation
 		email.sendEmail(emailAddress, confirmId);
     });
