@@ -6,15 +6,15 @@ var app = angular.module('tswAppAdmin').controller('AdminCtrl', ['$scope', '$htt
 	
 	//Getting news
 	var condition = "";
-	if($scope.search !== null) {
+	if($scope.search != null) {
 		condition = "?title="+$scope.search;
 	}
-	if(id !== null) {
+	if(id != null) {
 		condition = "?id="+id;
 	}
 	$http.get("/server/newsSelect" + condition).success(function(data){
 		//Edit purposes
-		if(id !== null) {
+		if(id != null) {
 			$scope.article = data.rows[0];
 			return;
 		}

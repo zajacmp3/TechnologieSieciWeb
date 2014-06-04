@@ -14,7 +14,8 @@ var app = angular.module('tswApp').controller('MainCtrl', ['$scope', 'Pagination
 	});
 	$scope.articles = [];
 	var condition = "";
-	if($scope.search !== null) {
+	//JShint error - != null is !null and !undefined this stays as it is.
+	if($scope.search != null) {
 		condition = "?title="+$scope.search;
 	}
 	$http.get("/server/newsSelect" + condition).success(function(data){

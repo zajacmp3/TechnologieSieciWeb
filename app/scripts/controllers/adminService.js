@@ -5,12 +5,12 @@ var app = angular.module('tswAppAdmin').controller('AdminServiceCtrl', ['$scope'
 	
 	//Getting news
 	var condition = "";
-	if(id !== null) {
+	if(id != null) {
 		condition = "?id="+id;
 	}
 	$http.get("/server/serviceSelect" + condition).success(function(data){
 		//Edit purposes
-		if(id !== null) {
+		if(id != null) {
 			$scope.service = data.rows[0];
 			return;
 		}
