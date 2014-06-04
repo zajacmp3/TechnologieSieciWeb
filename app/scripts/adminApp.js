@@ -32,6 +32,18 @@ angular
         templateUrl: 'views/admin/views/admin/edit.html',
         controller: 'AdminCtrl'
       })
+      .when('/services', {
+        templateUrl: 'views/admin/views/service/main.html',
+        controller: 'AdminServiceCtrl'
+      })     
+      .when('/serviceAdd', {
+        templateUrl: 'views/admin/views/service/add.html',
+        controller: 'AdminServiceCtrl'
+      })
+      .when('/serviceEdit/:id', {
+        templateUrl: 'views/admin/views/service/edit.html',
+        controller: 'AdminServiceCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

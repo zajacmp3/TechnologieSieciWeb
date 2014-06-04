@@ -105,21 +105,27 @@ app.post('/admin/serviceEdit', ensureAuthenticated, function(req, res){
 	delete params.id;
 	req.query = {id: id, set : params};
 	model.serviceUpdate(req, res);
-	res.redirect('/admin');
+	res.redirect('/admin#/services');
 });
-//Remove news
+//Remove service
 app.get('/admin/serviceRemove/:id', ensureAuthenticated, function(req, res){
 	req.query = {id: req.params.id};
 	model.serviceDelete(req, res);
-	res.redirect('/admin');
+	res.redirect('/admin#/services');
 });
-//Add news
+//clean service
+app.get('/admin/serviceClean/:id', ensureAuthenticated, function(req, res){
+	req.query = {service_id: req.params.id};
+	model.reservationDelete(req, res);
+	res.redirect('/admin#/services');
+});
+//Add service
 app.post('/admin/serviceAdd', ensureAuthenticated, function(req, res){
 	req.query = req.body;
 	var now = new Date();
 	req.query.modified = now.getFullYear() + ":" + now.getMonth() + ":" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 	model.serviceInsert(req, res);
-	res.redirect('/admin');
+	res.redirect('/admin#/services');
 });
 
 var server = http.createServer(app);

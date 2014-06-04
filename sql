@@ -44,3 +44,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
 )
 ENGINE = InnoDB;
+
+ALTER TABLE `services` ADD COLUMN `created` TIMESTAMP  NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `is_cyclic`,
+ ADD COLUMN `modified` TIMESTAMP  NOT NULL AFTER `created`;
+

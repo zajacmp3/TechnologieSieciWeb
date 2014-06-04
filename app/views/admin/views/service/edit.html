@@ -1,0 +1,12 @@
+<form class="news-add" name="service" action="/admin/serviceEdit" method="post">
+	<input type="hidden" name="id" value="{{service.id}}"/>
+	<label class="label-news">Tytuł</label>
+	<input ng-model="service.name" type="text" name="name"/>
+	<label class="label-news">Dzień Tygodnia</label>
+	<input ng-model="service.dayName" type="text" name="dayName"/>
+	<label class="label-news">Godzina</label>
+	<input ng-model="service.time" type="time" name="time"/>
+	<label class="label-news">Cykliczna</label>
+	<input ng-model="service.is_cyclic" type="checkbox" name="is_cyclic"/>
+	<button type="submit" class="btn btn-default">Zapisz</button>
+</form>
